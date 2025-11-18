@@ -1,9 +1,10 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Plateau {
 
-    public Plateau() {
-
+    Chevalet chevalet;
+    public Plateau(Chevalet chevalet) {
+        this.chevalet = chevalet;
     }
 
     public void afficherPlateau() {
@@ -22,30 +23,44 @@ public class Plateau {
             colonnes.add(rangees);
         }
 
+        // Affichage de la ligne des lettres (A à O)
+        System.out.print("   "); // décalage pour aligner avec les numéros
+        for (int j = 0; j < taille; j++) {
+            System.out.print("  " + (char)('A' + j) + " ");
+        }
+        System.out.println();
+
         // Exemple (à effacer et remplacer) : placer quelques lettres
-        colonnes.get(0).set(0, new Tuile('X', 10));
-        colonnes.get(7).set(7, new Tuile('O', 1));
-        colonnes.get(14).set(14, new Tuile('E', 1));
+//        colonnes.get(0).set(0, new Tuile('X', 10));
+//        colonnes.get(7).set(7, new Tuile('O', 1));
+//        colonnes.get(14).set(14, new Tuile('E', 1));
 
         // Affichage des colonnes
         for (int i = 0; i < taille; i++) {
             // lignes horizontales
+            System.out.print("   ");
             for (int j = 0; j < taille; j++) {
                 System.out.print("+---");
             }
             System.out.println("+");    // Ne pas oublier de passer à la ligne
 
             // lignes verticales avec contenu des cellules
+            System.out.print(String.format("%2d ", i + 1)); // numéro de ligne à gauche
             for (int j = 0; j < taille; j++) {
                 System.out.print("| " + colonnes.get(i).get(j).getLettre() + " ");
             }
             System.out.println("|");    // Ne pas oublier de passer à la ligne
         }
         // rangee horizontale finale
+        System.out.print("   ");
         for (int j = 0; j < taille; j++) {
             System.out.print("+---");
         }
         System.out.println("+");
+    }
+
+    public void afficherChevalet() {
+        chevalet.afficherChevalet();
     }
 
 }

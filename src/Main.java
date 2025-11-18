@@ -1,7 +1,10 @@
-class Main extends Plateau {
+class Main {
     public static void main(String[] args) {
-        Plateau plateau = new Plateau();
+        Sac sac = new Sac();
+        Chevalet chevalet = new Chevalet(sac);
+        Plateau plateau = new Plateau(chevalet);
 
         plateau.afficherPlateau();
+        plateau.afficherChevalet();
     }
 }

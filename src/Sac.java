@@ -67,12 +67,11 @@ public class Sac {
         Tuile pioche = sac.get(index);
         sac.remove(index);
 
-        System.out.println("Tu as pioché : " + pioche.lettre + " (" + pioche.valeur + ")");
-
+//        System.out.println("Tu as pioché : " + pioche.lettre + " (" + pioche.valeur + ")");
         return pioche;
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        Sac sac = new Sac();
 //        sac.afficherSac();
 //
@@ -83,5 +82,5 @@ public class Sac {
 //
 //        System.out.println("\nSac après piochage :");
 //        sac.afficherSac();
-    }
+//    }
 }
