@@ -22,6 +22,10 @@ public class Chevalet {
         }
     }
 
+    public void echangerTuile() {
+
+    }
+
 //    public static void main(String[] args) {
 //
 //        Chevalet chevalet = new Chevalet(new Sac());

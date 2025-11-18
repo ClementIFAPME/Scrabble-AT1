@@ -60,4 +60,8 @@ public class Plateau {
         chevalet.afficherChevalet();
     }
 
+    public void jouerTuile() {
+
+    }
+
 }
