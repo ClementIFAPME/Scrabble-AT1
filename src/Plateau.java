@@ -8,10 +8,9 @@ public class Plateau {
     }
 
     public void afficherPlateau() {
-
         int taille = 15;
 
-        // Création des colonnes : ArrayList de ArrayList
+        // Création des colonnes : ArrayList de ArrayList de tuiles
         ArrayList<ArrayList<Tuile>> colonnes = new ArrayList<>();
 
         // Initialisation des lignes avec des espaces vides
@@ -30,10 +29,8 @@ public class Plateau {
         }
         System.out.println();
 
-        // Exemple (à effacer et remplacer) : placer quelques lettres
-//        colonnes.get(0).set(0, new Tuile('X', 10));
-//        colonnes.get(7).set(7, new Tuile('O', 1));
-//        colonnes.get(14).set(14, new Tuile('E', 1));
+        // Affichage du centre (H-8)
+        colonnes.get(7).get(7).setLettre('O');
 
         // Affichage des colonnes
         for (int i = 0; i < taille; i++) {
@@ -45,7 +42,7 @@ public class Plateau {
             System.out.println("+");    // Ne pas oublier de passer à la ligne
 
             // lignes verticales avec contenu des cellules
-            System.out.print(String.format("%2d ", i + 1)); // numéro de ligne à gauche
+            System.out.printf("%2d ", i + 1); // numéro de ligne à gauche
             for (int j = 0; j < taille; j++) {
                 System.out.print("| " + colonnes.get(i).get(j).getLettre() + " ");
             }
