@@ -1,10 +1,13 @@
 class Main {
     public static void main(String[] args) {
-        Sac sac = new Sac();
-        Chevalet chevalet = new Chevalet(sac);
-        Plateau plateau = new Plateau(chevalet);
+//        Sac sac = new Sac();
+//        Chevalet chevalet = new Chevalet(sac);
+//        Plateau plateau = new Plateau(chevalet);
+//
+//        plateau.afficherPlateau();
+//        plateau.afficherChevalet();
 
-        plateau.afficherPlateau();
-        plateau.afficherChevalet();
+        Dictionnaire dico = new Dictionnaire();
+        System.out.println(dico.getDico());
     }
 }

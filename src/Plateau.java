@@ -60,8 +60,15 @@ public class Plateau {
         chevalet.afficherChevalet();
     }
 
-    public void jouerTuile() {
+    public void jouerMot() {
 
+/*
+        1 : demander via Scanner les positions xy de la case qui commence le mot
+          -> (colonnes.get().get().setLettre(lettres du chevalet), le tout dans une boucle pour ne pas devoir demander
+          à chaque fois les lettres du mot
+
+        2 : 
+*/
     }
 
 }
